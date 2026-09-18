@@ -63,19 +63,82 @@ body {
   margin-bottom: 0.8em;
 }
 
-.formular input {
+.formular input,
+.formular textarea,
+.formular select {
   display: block;
   width: 100%;
   max-width: 400px;
   padding: 0.4em;
   margin-top: 0.2em;
   font-size: 1em;
+  font-family: inherit;
 }
 
 .formular button {
   padding: 0.5em 1.2em;
   font-size: 1em;
   cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.feld-nebeneinander {
+  display: flex;
+  gap: 1em;
+}
+
+.feld-nebeneinander label {
+  flex: 1;
+}
+
+.werkzeugleiste {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.werkzeugleiste input[type="search"] {
+  flex-grow: 1;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.werkzeugleiste button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tabelle {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.tabelle th,
+.tabelle td {
+  text-align: left;
+  padding: 0.5em 0.7em;
+  border-bottom: 1px solid #eee;
+}
+
+.tabelle-zeile {
+  cursor: pointer;
+}
+
+.tabelle-zeile:hover {
+  background: #f0f4f8;
+}
+
+.loeschen-button {
+  background: none;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 1em;
 }
 
 .hinweis {
