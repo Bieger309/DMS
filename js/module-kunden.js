@@ -88,6 +88,17 @@ async function kundenListeAnzeigen(container, suchbegriff = '') {
       event.stopPropagation();
       const id = Number(button.dataset.id);
       const kunde = await DB.einesHolen('kunden', id);
+
+      const alleFahrzeuge = await DB.alleHolen('fahrzeuge');
+      const hatFahrzeuge = alleFahrzeuge.some((f) => f.kundeId === id);
+      if (hatFahrzeuge) {
+        window.alert(
+          `Kunde "${kundeAnzeigename(kunde)}" hat noch Fahrzeuge zugeordnet. ` +
+          'Bitte die Fahrzeuge zuerst löschen oder einem anderen Kunden zuordnen.'
+        );
+        return;
+      }
+
       const bestaetigt = window.confirm(`Kunde "${kundeAnzeigename(kunde)}" wirklich löschen?`);
       if (!bestaetigt) return;
       await DB.loeschen('kunden', id);
