@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #222;
+  background: #f5f5f5;
+}
+
+#app {
+  display: flex;
+  min-height: 100vh;
+}
+
+#nav {
+  width: 220px;
+  flex-shrink: 0;
+  background: #263238;
+  color: #eceff1;
+  padding: 1em 0;
+}
+
+#nav h2 {
+  font-size: 1.1em;
+  padding: 0 1em;
+  margin: 0 0 0.5em 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.6em 1em;
+  color: #eceff1;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: #37474f;
+}
+
+.nav-link.aktiv {
+  background: #455a64;
+  font-weight: bold;
+}
+
+#inhalt {
+  flex-grow: 1;
+  padding: 1.5em 2em;
+  max-width: 900px;
+}
+
+.karte {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.formular label {
+  display: block;
+  margin-bottom: 0.8em;
+}
+
+.formular input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.4em;
+  margin-top: 0.2em;
+  font-size: 1em;
+}
+
+.formular button {
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.hinweis {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.status {
+  margin-left: 1em;
+  color: #2e7d32;
+}
+
+.fehler {
+  color: #c62828;
+}
+
+.platzhalter {
+  color: #888;
+  font-style: italic;
+}
+
+@media print {
+  #nav {
+    display: none;
+  }
+  #inhalt {
+    max-width: none;
+    padding: 0;
+  }
+}

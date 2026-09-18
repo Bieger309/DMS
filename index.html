@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Werkstatt-DMS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <nav id="nav">
+      <h2>Werkstatt-DMS</h2>
+      <a class="nav-link" data-route="dashboard" href="#dashboard">Übersicht</a>
+      <a class="nav-link" data-route="kunden" href="#kunden">Kunden</a>
+      <a class="nav-link" data-route="fahrzeuge" href="#fahrzeuge">Fahrzeuge</a>
+      <a class="nav-link" data-route="teile" href="#teile">Teilestamm</a>
+      <a class="nav-link" data-route="arbeitswerte" href="#arbeitswerte">Arbeitswerte</a>
+      <a class="nav-link" data-route="auftraege" href="#auftraege">Aufträge</a>
+      <a class="nav-link" data-route="rechnungen" href="#rechnungen">Rechnungen</a>
+      <a class="nav-link" data-route="einstellungen" href="#einstellungen">Einstellungen &amp; Backup</a>
+    </nav>
+    <main id="inhalt"></main>
+  </div>
+
+  <script src="js/db.js"></script>
+  <script src="js/backup.js"></script>
+  <script src="js/module-dashboard.js"></script>
+  <script src="js/module-kunden.js"></script>
+  <script src="js/module-fahrzeuge.js"></script>
+  <script src="js/module-teile.js"></script>
+  <script src="js/module-arbeitswerte.js"></script>
+  <script src="js/module-auftraege.js"></script>
+  <script src="js/module-rechnungen.js"></script>
+  <script src="js/module-einstellungen.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
